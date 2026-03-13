@@ -14,6 +14,7 @@ FROM python:3.13-slim AS builder
     COPY . .
 
     ENV VIRTUAL_ENV=/opt/venv
+    ENV UV_PROJECT_ENVIRONMENT=/opt/venv
     RUN uv venv $VIRTUAL_ENV
     ENV PATH="$VIRTUAL_ENV/bin:$PATH"
     RUN uv sync --locked --no-dev
