@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 import { getErrorMessage } from '@/lib/errors/handler';
 
 // Get all automations
+// Get automations list
 export function useAutomations() {
   return useQuery({
     queryKey: queryKeys.automations.list(),

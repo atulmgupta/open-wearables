@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e -x
-
+# This script is the main entry point for the backend container. It performs necessary initialization steps before starting the FastAPI application.
 # Init database
 echo 'Applying migrations...'
 uv run alembic upgrade head
